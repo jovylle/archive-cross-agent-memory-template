@@ -4,7 +4,8 @@
       "command": "ecc-memory-mcp",
       "env": {
         "ECC_MEMORY_HARNESS": "kiro",
-        "ECC_MEMORY_ALLOW_USER_SCOPE": "1"
+        "ECC_MEMORY_ALLOW_USER_SCOPE": "1",
+        "ECC_MEMORY_USER_ROOT": "/absolute/path/to/your/vault"
       }
     }
   }

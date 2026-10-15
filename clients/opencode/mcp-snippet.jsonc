@@ -1,0 +1,25 @@
+// Merge this object into the "mcp.servers" section of ~/.config/opencode/opencode.jsonc
+//
+// OpenCode uses "environment" (not "env") and requires "command" to be an array.
+// Because OpenCode does not inherit the shell PATH, use the absolute paths to
+// your node binary and the ecc-universal MCP script.
+//
+// Find your paths:
+//   which node          → e.g. /home/you/.local/share/fnm/.../installation/bin/node
+//   npm root -g         → e.g. /home/you/.local/share/fnm/.../installation/lib/node_modules
+//
+// Then fill in the placeholders below.
+{
+  "shared-memory": {
+    "type": "local",
+    "command": [
+      "/absolute/path/to/node",
+      "/absolute/path/to/node_modules/ecc-universal/scripts/memory-mcp.mjs"
+    ],
+    "environment": {
+      "ECC_MEMORY_HARNESS": "opencode",
+      "ECC_MEMORY_ALLOW_USER_SCOPE": "1",
+      "ECC_MEMORY_USER_ROOT": "/absolute/path/to/your/vault"
+    }
+  }
+}
